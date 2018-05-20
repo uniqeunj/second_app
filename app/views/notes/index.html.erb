@@ -1,0 +1,10 @@
+<h1>모든 노트들 목록입니다</h1>
+<h2><a href='/notes/new'>New Note</a></h2>
+  <!--erb파일 내에서 ruby코드를 사용할때 쓰이는 괄호-->
+  <!--사용자들에게 보여주고 싶지 않을때 =뺌-->
+<ul>
+<% @notes.each do |note| %>
+ <!--note.id 에 @안 붙이는 이유: |note|라고 설정했기 때문에-->
+ <li><a href='/notes/<%= note.id %>'><%= note.title %></a></li>
+<% end %>
+</ul>

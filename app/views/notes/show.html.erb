@@ -1,0 +1,8 @@
+<h1><%=@note.id %>번 글 :: <%= @note.title %></h1>
+<p><%= @note.content %></p>
+<a href='/notes'>목록으로 가기</a>
+<a href="/notes/<%=@note.id %>" 
+   data-confirm='삭제하시겠습니까?' 
+   data-method='delete'>삭제
+   </a>
+<a href='/notes/<%= @note.id %>/edit'>수정</a>

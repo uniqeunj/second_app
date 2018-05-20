@@ -1,0 +1,8 @@
+<h1>기존 글을 수정해 보아요!</h1>
+<form action='/notes/<%= @note.id %>' method='POST'>
+  <input type="hidden" name="_method" value="patch"></input>
+  <input type="hidden" name="authenticity_token" value =<%= @token %>></input>
+  <input name='input_title' type='text' value=<%= @note.title %>></input>
+  <input name='input_content' type='text' value=<%= @note.content %>></input>
+  <input type='submit'></input>
+</form>
